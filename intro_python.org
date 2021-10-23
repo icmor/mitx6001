@@ -1,1 +1,10 @@
 #+TITLE: Introduction to Computer Science and Programming Using Python
+
+* Unit 1 - Basics
+** Computers are fast... but not fast enough (if using simple algorithms)
+- 1 Ghz ~ 1,000,000,000 operations per second!
+- Naive web word search (45B pages) ~ 5.2 days
+** Types of errors:
+- Syntactic
+- Static Semantic
+- Semantic or logic errors
