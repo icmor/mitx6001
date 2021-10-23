@@ -8,3 +8,12 @@
 - Syntactic
 - Static Semantic
 - Semantic or logic errors
+* Unit 2 - Simple Programs
+** Guess and Check Algorithms
+- Exhaustive Enumeration
+- Bisection search
+- Newton's Method
+** Functions
+- Decomposition
+- Abstraction
+- /Recursion/ is awesome!
