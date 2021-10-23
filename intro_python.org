@@ -36,3 +36,33 @@
 - Values - dict.values()
 - dict.items() -> (key, value)
 - /Memoization/ is awesome!
+* Unit 4 - Good Programming Practices
+** Defensive Programming
+- Modularity
+- Specifications
+- Assertions
+** Testing
+*** Types
+- Unit Testing
+- Regression Testing
+- Integration Testing
+*** Approaches
+**** Black Box Testing
+**** Glass Box Testing
+Loops, branches and recursion
+- Not run
+- Run once
+- Run multiple times
+** Debugging
+- Good ol' print
+- Bisection
+- Rubber Ducky 🦆
+*** Scientific Method
+1. Observation
+2. Hypothesis (inductive reasoning)
+3. Testing (deductive reasoning)
+4. Repeat
+** EAFP - easier to ask for forgiveness than permission
+- Use try except
+- Assumes existence of valid info
+- Faster than conditionals if exceptions are uncommon
