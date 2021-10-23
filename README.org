@@ -1,0 +1,4 @@
+#+title: MITx 6.00.1x Introduction to Computer Science and Programming Using Python
+#+author: Iñaki Cornejo
+
+My answers to the problem sets of this [[https://www.edx.org/es/course/introduction-to-computer-science-and-programming-7][great edx course]] and some very minimal notes on the lectures.
