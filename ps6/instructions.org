@@ -1,0 +1,205 @@
+*** Problem 1
+**** Problem 1-1
+The ONLY thing we are interested in when designing programs is that it returns the correct answer.
+
+=False=
+
+**** Problem 1-2
+When determining asymptotic complexity, we discard all terms except for the one with the largest growth rate.
+
+=True=
+
+**** Problem 1-3
+Bisection search is an example of linear time complexity
+
+=False=
+
+****  Problem 1-4
+For large values of n, an algorithm that takes 20000n^2 steps has better time complexity (takes less time) than one that takes 0.001n^5 steps
+
+=True=
+
+*** Problem 2
+**** Problem 2-1
+Indirection, as talked about in lecture, means you have to traverse the list more than once.
+
+=False=
+
+****  Problem 2-2
+The complexity of binary search on a sorted list of n items is O(logn).
+
+=True=
+
+****  Problem 2-3
+The worst case time complexity for selection sort is O(n^2).
+
+=True=
+
+****  Problem 2-4
+The base case for the recursive version of merge sort from lecture is checking only for the list being empty.
+
+=False=
+
+*** Problem 3
+For each of the following expressions, select the order of growth class that best describes it from the following list: O(1), O(logn), O(n), O(nlogn), O(n^c), and O(c^n).
+
+1. 0.0000001n + 1000000
+   O(n)
+2. 0.0001n^2 + 20000n - 90000
+   O(n^c)
+3. 20n + 900log(n) + 100000
+   O(n)
+4. (log(n))^2 + 5n^7
+   O(n^c)
+5. n^200 - 2n^30
+   O(n^c)
+6. 30n^2 + nlog(n)
+   O(n^c)
+7. nlog(n) - 3000n
+   O(nlogn)
+8. 3
+   O(1)
+9. 5^n + n^5 + n + 5
+   O(c^n)
+10. nlog(n) + n^2 + n + logn + 1 + 2^n
+    O(c^n)
+
+*** Problem 4
+**** Problem 4-1
+Consider the following Python procedure. Specify its order of growth.
+#+begin_src python
+def modten(n):
+    return n%10
+#+end_src
+O(1)
+
+****  Problem 4-2
+Consider the following Python procedure. Specify its order of growth.
+
+#+begin_src python
+def multlist(m, n):
+    '''
+    m is the multiplication factor
+    n is a list.
+    '''
+    result = []
+    for i in range(len(n)):
+        result.append(m*n[i])
+    return result
+#+end_src
+O(n)
+
+**** Problem 4-3
+Consider the following Python procedure. Specify its order of growth.
+
+#+begin_src python
+def foo(n):
+    if n <= 1:
+        return 1
+    return foo(n/2) + 1
+#+end_src
+O(logn)
+
+**** Problem 4-4
+Consider the following Python procedure. Specify its order of growth.
+#+begin_src python
+def recur(n):
+    if n <= 0:
+        return 1
+    else:
+        return n*recur(n-1)
+#+end_src
+O(n)
+
+**** Problem 4-5
+Consider the following Python procedure. Specify its order of growth.
+#+begin_src python
+def baz(n):
+    for i in range(n):
+        for j in range(n):
+            print( i,j )
+#+end_src
+O(n^2)
+
+*** Problem 5
+Here is code for linear search that uses the fact that a set of elements is sorted in increasing order:
+#+begin_src python
+def search(L, e):
+    for i in range(len(L)):
+        if L[i] == e:
+            return True
+        if L[i] > e:
+            return False
+    return False
+ #+end_src
+
+Consider the following code, which is an alternative version of search.
+#+begin_src python
+def newsearch(L, e):
+    size = len(L)
+    for i in range(size):
+        if L[size-i-1] == e:
+            return True
+        if L[i] < e:
+            return False
+    return False
+#+end_src
+Which of the following statements is correct? You may assume that each function is tested with a list L whose elements are sorted in increasing order; for simplicity, assume L is a list of positive integers.
+
+- [ ] search and newsearch return the same answers for all L and e.
+- [ ] search and newsearch return the same answers provided L is non-empty.
+- [ ] search and newsearch return the same answers provided L is non-empty and e is in L.
+- [ ] search and newsearch never return the same answers.
+- [X] search and newsearch return the same answers for lists L of length 0, 1, or 2.
+- [ ] search and newsearch return the same answers for lists L of length 0 or 1.
+
+*** Problem 6
+**** Problem 6-1
+Answer the questions below based on the following sorting function. If it helps, you may paste the code in your programming environment. Study the output to make sure you understand the way it sorts.
+
+#+begin_src python
+def swapSort(L):
+    """ L is a list on integers """
+    print("Original L: ", L)
+    for i in range(len(L)):
+        for j in range(i+1, len(L)):
+            if L[j] < L[i]:
+                # the next line is a short
+                # form for swap L[i] and L[j]
+                L[j], L[i] = L[i], L[j]
+                print(L)
+    print("Final L: ", L)
+#+end_src
+Does this function sort the list in increasing or decreasing order?
+
+=Increasing=
+
+**** Problem 6-2
+What is the worst case time complexity of swapSort? Consider different kinds of lists when the length of the list is large.
+
+=O(n^2)=
+
+**** Problem 6-3
+If we make a small change to the line for j in range(i+1, len(L)): such that the code becomes:
+
+#+begin_src python
+def modSwapSort(L):
+    """ L is a list on integers """
+    print("Original L: ", L)
+    for i in range(len(L)):
+        for j in range(len(L)):
+            if L[j] < L[i]:
+                # the next line is a short
+                # form for swap L[i] and L[j]
+                L[j], L[i] = L[i], L[j]
+                print(L)
+    print("Final L: ", L)
+#+end_src
+What happens to the behavior of swapSort with this new code?
+
+=modSwapSort now orders the list in descending order for all lists.=
+
+**** Problem 6-4
+What happens to the time complexity of this modSwapSort?
+
+=Best and worst cases stay the same=

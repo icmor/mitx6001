@@ -79,3 +79,18 @@ Loops, branches and recursion
 ** Method Resolution Order (C3)
 ** Class variables
 - Defined outside any methods and shared among all instances
+* Unit 6 - Algorithmic Complexity
+** Order of Growth - Big Oh Notation
+- Rate of growth relative to the input
+- Worst case scenario
+*** Orders of growth
+- Constant: O(1)
+- Logarithmic: O(logn)
+- Linear: O(n)
+- Loglinear: O(nlogn)
+- Polynomial: O(n^c)
+- Exponential O(c^n)
+** Sorting Algorithms
+- Bubble sort = O(n^2)
+- Selection sort = O(n^2)
+- Merge sort = O(nlogn)
