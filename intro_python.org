@@ -17,3 +17,22 @@
 - Decomposition
 - Abstraction
 - /Recursion/ is awesome!
+* Unit 3 - Structured Types
+*** Collections support unpacking
+- Return multiple values from a function
+- Assign multiple variables at once
+- \*args and \*kwargs
+** Lists
+*** Copying
+- l2 = l1 (same object, same references for elements)
+- l2 = l1[:] (new object, same references for elements)
+- l2 = l1.copy() (same as l1[:])
+- l2 = copy.deepcopy(l1) (new object, new elements)
+** Functions are first class citizens
+- Higher Order Procedures = accept or return functions
+** Dictionaries
+- Mutable
+- Keys (inmutable) - dict.keys()
+- Values - dict.values()
+- dict.items() -> (key, value)
+- /Memoization/ is awesome!
