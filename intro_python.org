@@ -66,3 +66,16 @@ Loops, branches and recursion
 - Use try except
 - Assumes existence of valid info
 - Faster than conditionals if exceptions are uncommon
+* Unit 5 - Object Oriented Programming
+*Everything in Python is an object*
+** Advantages of OOP
+- Bundle data and procedures with well-defined interfaces
+- Abstraction
+- Modularity
+  - Inheritance
+  - Namespaces
+** @property decorator
+- Python's way of doing getters and setters
+** Method Resolution Order (C3)
+** Class variables
+- Defined outside any methods and shared among all instances
