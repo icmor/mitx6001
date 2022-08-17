@@ -24,9 +24,9 @@ def count_longest_alphabetical(word):
     current = ''
     for letter in word:
         if not current or letter < current[-1]:
+            if len(current) > len(longest):
+                longest = current
             current = letter
         else:
             current += letter
-        if len(current) > len(longest):
-            longest = current
-    return longest
+    return len(longest)
